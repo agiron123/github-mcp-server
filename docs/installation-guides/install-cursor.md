@@ -1,22 +1,25 @@
 # Install GitHub MCP Server in Cursor
 
 ## Prerequisites
-1. Cursor IDE installed (latest version)
-2. [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) with appropriate scopes
-3. For local installation: [Docker](https://www.docker.com/) installed and running
+1. Cursor IDE installed (latest version)  
+2. [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) with appropriate scopes (needed if you don’t use OAuth)  
+3. For local installation: [Docker](https://www.docker.com/) installed and running  
 
 ## Remote Server Setup (Recommended)
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=github&config=eyJ1cmwiOiJodHRwczovL2FwaS5naXRodWJjb3BpbG90LmNvbS9tY3AvIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyIFlPVVJfR0lUSFVCX1BBVCJ9LCJ0eXBlIjoiaHR0cCJ9)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=github&config=eyJ1cmwiOiJodHRwczovL2FwaS5naXRodWJjb3BpbG90LmNvbS9tY3AvIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyIFlPVVJfR0lUSFVCX1BBVCJ9LCJ0eXBlIjoiaHR0cCJ9)
 
-Uses GitHub's hosted server at https://api.githubcopilot.com/mcp/. Requires Cursor v0.48.0+ for Streamable HTTP support. While Cursor supports OAuth for some MCP servers, the GitHub server currently requires a Personal Access Token.
+Uses GitHub’s hosted server at `https://api.githubcopilot.com/mcp/`. Requires Cursor v0.48.0+ for Streamable HTTP support.  
 
 ### Install steps
-1. Click the install button above and follow the flow, or go directly to your global MCP configuration file at `~/.cursor/mcp.json` and enter the code block below
-2. In Tools & Integrations > MCP tools, click the pencil icon next to "github"
-3. Replace `YOUR_GITHUB_PAT` with your actual [GitHub Personal Access Token](https://github.com/settings/tokens)
-4. Save the file
-5. Restart Cursor
+1. In Cursor, click **Connect** on the GitHub MCP server.  
+   - If available, go through the **OAuth flow** (recommended).  
+   - If OAuth isn’t supported, follow the **PAT steps** below.  
+2. Or go directly to your global MCP configuration file at `~/.cursor/mcp.json` and enter the code block below.  
+3. In **Tools & Integrations → MCP tools**, click the pencil icon next to **github**.  
+4. Replace `YOUR_GITHUB_PAT` with your actual [GitHub Personal Access Token](https://github.com/settings/tokens).  
+5. Save the file.  
+6. Restart Cursor.  
 
 ### Streamable HTTP Configuration
 
@@ -35,16 +38,17 @@ Uses GitHub's hosted server at https://api.githubcopilot.com/mcp/. Requires Curs
 
 ## Local Server Setup
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=github&config=eyJjb21tYW5kIjoiZG9ja2VyIiwiYXJncyI6WyJydW4iLCItaSIsIi0tcm0iLCItZSIsIkdJVEhVQl9QRVJTT05BTF9BQ0NFU1NfVE9LRU4iLCJnaGNyLmlvL2dpdGh1Yi9naXRodWItbWNwLXNlcnZlciJdLCJlbnYiOnsiR0lUSFVCX1BFUlNPTkFMX0FDQ0VTU19UT0tFTiI6IllPVVJfR0lUSFVCX1BHVCJ9fQ==)
+[![Install MCP Server](cursor://anysphere.cursor-deeplink/mcp/install?name=github&config=eyJ1cmwiOiJodHRwczovL2FwaS5naXRodWJjb3BpbG90LmNvbS9tY3AvIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyIFlPVVJfR0lUSFVCX1BBVCJ9LCJ0eXBlIjoiaHR0cCJ9)
 
 The local GitHub MCP server runs via Docker and requires Docker Desktop to be installed and running.
 
 ### Install steps
-1. Click the install button above and follow the flow, or go directly to your global MCP configuration file at `~/.cursor/mcp.json` and enter the code block below
-2. In Tools & Integrations > MCP tools, click the pencil icon next to "github"
-3. Replace `YOUR_GITHUB_PAT` with your actual [GitHub Personal Access Token](https://github.com/settings/tokens)
-4. Save the file
-5. Restart Cursor
+1. Click the install button above and follow the flow (OAuth recommended)
+2. Or go directly to your global MCP configuration file at `~/.cursor/mcp.json` and enter the code block below
+3. In Tools & Integrations > MCP tools, click the pencil icon next to "github"
+4. Replace `YOUR_GITHUB_PAT` with your actual [GitHub Personal Access Token](https://github.com/settings/tokens)
+5. Save the file
+6. Restart Cursor
 
 ### Docker Configuration
 
